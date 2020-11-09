@@ -5,9 +5,11 @@ bars_in_etude = 8
 beats_in_bar = [4] # [3,4,5]
 notes_in_beat = [4] # [3,4,5,6]
 user_seed = "Brother's wedding"
-proportion_of_pauses = 10
-proportion_of_accents = 40
-maximum_number_of_notes_played_with_one_hand_in_a_row = 3
+proportion_of_pauses = 20
+proportion_of_accents = 20
+proportion_of_flams = 30
+maximum_flams_in_a_row = 2
+maximum_number_of_notes_played_with_one_hand_in_a_row = 2
 starting_hand = ['R','L'] # ['R'], ['L']
 
 # ГЕНЕРАЦИЯ ФОРМЫ ПЬЕСЫ
@@ -94,3 +96,35 @@ for bar in piece:
                         previous_note['applicature'] = note['applicature']
                         previous_note['its_accent'] = note['its_accent']
                         previous_note['overflow'] = 1
+
+# РАССТАНОВКА ФОРШЛАГОВ
+
+flam_counter = 0
+
+for bar in piece:
+    for beat in bar:
+        for note in beat:
+            # паузы обнуляют счетчик форшлагов
+            if note['its_pause']:
+                flam_counter = 0
+            
+            # до сюда дошли только ноты
+            else:
+
+                # Если форшлагов подряд сыграно более чем {maximum_flams_in_a_row} то нота НЕ станет форшлагом
+                if flam_counter == maximum_flams_in_a_row:
+                    note['its_flam'] = False
+                    flam_counter = 0
+                
+                
+                else:
+                    # либо случайно присваиваем ноте форшлаг
+                    if random.randint(0,99) < proportion_of_flams:
+                        note['its_flam'] = True
+                        flam_counter += 1
+                    # либо нет
+                    else:
+                        note['its_flam'] = False
+                        flam_counter = 0
+
+print('generation complete')

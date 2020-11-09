@@ -1,7 +1,7 @@
 from backend import *
 
 reverse = {
-    'enabled': False,
+    'enabled': True,
     'R': 'L',
     'L': 'R'
 }
@@ -13,7 +13,9 @@ comment = f'''
 Возможные длительности {notes_in_beat}
 Примерно {proportion_of_pauses}% пауз
 Примерно {proportion_of_accents}% акцентов
-Максимум ударов одной рукой подряд {maximum_number_of_notes_played_with_one_hand_in_a_row}
+Примерно {proportion_of_flams}% форшлагов
+Максимум ударов одной рукой подряд {maximum_number_of_notes_played_with_one_hand_in_a_row} без учета мелизмов
+Максимум форшлагов подряд {maximum_flams_in_a_row}
 Пьеса начинается с {starting_hand} руки
 Аппликатура "отзеркалена" {reverse['enabled']}'''
 
@@ -24,19 +26,10 @@ for bar in piece:
     print()
 
     for beat in bar:
-        print('\'', end='')
-        
-        # вывод нот в формате "о_О"
-        for note in beat:
-            if note['its_pause']:
-                print('_',end='')
-            elif note['its_accent']:
-                print('O',end='')
-            else:
-                print('o',end='')
-        print('(',end='')
+        print('\'', end='') 
 
         # вывод аппликатуры в формате (RLrl)
+        print('(',end='')
         for note in beat:
             
             # вывод сгенерированной аппликатуры 
@@ -58,5 +51,23 @@ for bar in piece:
                     print(str.lower(reverse[note['applicature']]),end='')
 
         print(')',end='')
+
+        # Форшлаги
+        print('[',end='')
+        for note in beat:
+            if note['its_pause']:
+                print('_',end='')
+            else:
+                if note['its_flam'] and note['its_accent']:
+                    print('F',end='')
+                elif not note['its_flam'] and note['its_accent']:
+                    print('O',end='')
+                elif note['its_flam'] and not note['its_accent']:
+                    print('f',end='')
+                else:
+                    print('o',end='')
+
+
+        print(']',end='')
 
 print()
