@@ -1,7 +1,7 @@
 from backend import *
 
 reverse = {
-    'enabled': True,
+    'enabled': False,
     'R': 'L',
     'L': 'R'
 }
@@ -9,14 +9,15 @@ reverse = {
 comment = f'''
 Пьеса "{user_seed}"
 {bars_in_etude} тактов
-Возможные размеры {beats_in_bar}
+Возможные размеры {beats_in_bar} четверти
 Возможные длительности {notes_in_beat}
 Примерно {proportion_of_pauses}% пауз
+Пьеса начинается с {starting_hand} руки
+Максимум ударов одной рукой подряд {maximum_number_of_notes_played_with_one_hand_in_a_row} без учета мелизмов
 Примерно {proportion_of_accents}% акцентов
 Примерно {proportion_of_flams}% форшлагов
-Максимум ударов одной рукой подряд {maximum_number_of_notes_played_with_one_hand_in_a_row} без учета мелизмов
 Максимум форшлагов подряд {maximum_flams_in_a_row}
-Пьеса начинается с {starting_hand} руки
+Примерно {proportion_of_doubles}% двоек
 Аппликатура "отзеркалена" {reverse['enabled']}'''
 
 print(comment)
@@ -69,5 +70,21 @@ for bar in piece:
 
 
         print(']',end='')
+
+        # Двойки
+        print('{',end='')
+        for note in beat:
+            if note['its_pause']:
+                print('_',end='')
+            else:
+                if note['its_double'] and note['its_accent']:
+                    print('D',end='')
+                elif not note['its_double'] and note['its_accent']:
+                    print('S',end='')
+                elif note['its_double'] and not note['its_accent']:
+                    print('d',end='')
+                else:
+                    print('s',end='')
+        print('}',end='')
 
 print()

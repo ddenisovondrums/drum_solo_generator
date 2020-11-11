@@ -2,15 +2,18 @@ import random
 
 # НАСТРОЙКИ
 bars_in_etude = 8
-beats_in_bar = [4] # [3,4,5]
-notes_in_beat = [4] # [3,4,5,6]
+beats_in_bar = [1] # [3,4,5]
+notes_in_beat = [4] # [2,3,4,5,6]
 user_seed = "Brother's wedding"
 proportion_of_pauses = 20
 proportion_of_accents = 20
-proportion_of_flams = 30
+proportion_of_flams = 20
+proportion_of_doubles = 100
 maximum_flams_in_a_row = 2
-maximum_number_of_notes_played_with_one_hand_in_a_row = 2
-starting_hand = ['R','L'] # ['R'], ['L']
+maximum_number_of_notes_played_with_one_hand_in_a_row = 1
+starting_hand = ['R'] # ['R', 'L'] ['R'], ['L']
+
+
 
 # ГЕНЕРАЦИЯ ФОРМЫ ПЬЕСЫ
 random.seed(user_seed)
@@ -126,5 +129,39 @@ for bar in piece:
                     else:
                         note['its_flam'] = False
                         flam_counter = 0
+
+
+# РАССТАНОВКА ДВОЕК
+
+next_note = {
+    'its_pause': True,
+    'applicature': '_',
+}    
+
+for bar in piece[::-1]:
+    for beat in bar[::-1]:
+        for note in beat[::-1]:
+
+            # паузы 
+            if note['its_pause']:
+                # обновляют стэйт
+                next_note['its_pause'] = True
+                next_note['applicature'] = '_'
+            
+            # форшлаги или акценты или нота перед нотой/форшлагом/акцентом играемыми той же рукой или ноты перед паузами
+            elif note['its_flam'] or note['its_accent'] or next_note['applicature'] == note['applicature'] or next_note['applicature'] == '_':
+                # не могут стать двойками
+                note['its_double'] = False
+                # обновляют стэйт
+                next_note['its_pause'] = False
+                next_note['applicature'] = note['applicature']
+
+            # все остальные ноты
+            else:
+                # могут стать двойками
+                note['its_double'] = True if random.randrange(0, 99) < proportion_of_doubles else False
+                # обновляют стэйт 
+                next_note['its_pause'] = False
+                next_note['applicature'] = note['applicature']
 
 print('generation complete')

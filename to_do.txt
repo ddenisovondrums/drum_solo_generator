@@ -61,3 +61,7 @@ Frontend
 #
 # иначе:
 #  ставим аппликатуру противоположную аппликатуре предыдущей ноты
+
+change variable names from "proportion of..." to "chance to beckame..."
+
+notes in beat == 6 can generate two seexteens + seexteenn triplet
