@@ -1,22 +1,38 @@
 import random
 
 # НАСТРОЙКИ
-bars_in_etude = 8
-beats_in_bar = [1] # [3,4,5]
-notes_in_beat = [4] # [2,3,4,5,6]
 user_seed = "Brother's wedding"
+bars_in_etude = 8 # Количество тактов
+beats_in_bar = [1] # Возможные размеры
 proportion_of_pauses = 20
-proportion_of_accents = 20
-proportion_of_flams = 20
-proportion_of_doubles = 100
-maximum_flams_in_a_row = 2
+proportion_of_accents = 100
+proportion_of_flams = 0
+maximum_flams_in_a_row = 0
+proportion_of_doubles = 0
 maximum_number_of_notes_played_with_one_hand_in_a_row = 1
 starting_hand = ['R'] # ['R', 'L'] ['R'], ['L']
 
-
+enabled_notes = {
+    'eight': (True, 2),
+    'triplets': (True, 3),
+    'sixteen': (True, 4),
+    'two_sixteenths_with_triplet': (True, 5),
+    'sixteen_triplets': (True, 6),
+    'quitniplets': (True, 5),
+}
 
 # ГЕНЕРАЦИЯ ФОРМЫ ПЬЕСЫ
 random.seed(user_seed)
+
+# Возможные длитлельности в доле
+notes_in_beat = []
+
+for enabled_note in enabled_notes:
+    note_is_enabled = enabled_notes[enabled_note][0]
+    notes_per_beat = enabled_notes[enabled_note][1]
+    if enabled_notes[enabled_note][0]:
+        notes_in_beat.append(notes_per_beat)
+
 piece = [[[{} for note in range(random.choice(notes_in_beat))] for beat in range(random.choice(beats_in_bar))] for bar in range(bars_in_etude)]
 
 # РАССТАНОВВКА ПАУЗ
@@ -147,7 +163,7 @@ for bar in piece[::-1]:
                 # обновляют стэйт
                 next_note['its_pause'] = True
                 next_note['applicature'] = '_'
-            
+
             # форшлаги или акценты или нота перед нотой/форшлагом/акцентом играемыми той же рукой или ноты перед паузами
             elif note['its_flam'] or note['its_accent'] or next_note['applicature'] == note['applicature'] or next_note['applicature'] == '_':
                 # не могут стать двойками
