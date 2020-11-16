@@ -13,13 +13,21 @@ maximum_number_of_notes_played_with_one_hand_in_a_row = 1
 starting_hand = ['R'] # ['R', 'L'] ['R'], ['L']
 
 enabled_notes = {
-    'eight': (True, 2),
-    'triplets': (True, 3),
-    'sixteen': (True, 4),
-    'two_sixteenths_with_triplet': (True, 5),
-    'sixteen_triplets': (True, 6),
-    'quitniplets': (True, 5),
+    'eight': [True, 2],
+    'triplets': [True, 3],
+    'sixteen': [True, 4],
+    'quitniplets': [True, 5],
+    'sixteen_triplets': [True, 6],
+    
+    # will be enabled automatically
+    'two_sixteenths_with_triplet': [False, 5],
 }
+
+# automatic enabling 'two_sixteenths_with_triplet'
+if enabled_notes['sixteen'][0] and enabled_notes['sixteen_triplets'][0]:
+    enabled_notes['two_sixteenths_with_triplet'][0] = True
+
+print(enabled_notes)
 
 # ГЕНЕРАЦИЯ ФОРМЫ ПЬЕСЫ
 random.seed(user_seed)
