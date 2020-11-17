@@ -162,4 +162,4 @@ for bar in piece[::-1]:
                 next_note['its_pause'] = False
                 next_note['applicature'] = note['applicature']
 
-print('generation complete')
+print('COMPLETED: backend.py')

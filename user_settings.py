@@ -1,7 +1,7 @@
 # SETTINGS
 user_seed = "Brother's wedding"
 bars_in_etude = 1 # number of measures in a piece
-beats_in_bar = [1] # possible time signatures
+beats_in_bar = [3,4] # possible time signatures
 proportion_of_pauses = 0
 proportion_of_accents = 50
 proportion_of_flams = 0
@@ -31,3 +31,5 @@ draw_reverse_applicature = {
     'R': 'L',
     'L': 'R'
 }
+
+print('COMPLETED: user_settings.py')
