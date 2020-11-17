@@ -1,16 +1,11 @@
 from backend import *
-
-reverse = {
-    'enabled': False,
-    'R': 'L',
-    'L': 'R'
-}
+from user_settings import *
 
 comment = f'''
 Пьеса "{user_seed}"
 {bars_in_etude} тактов
 Возможные размеры {beats_in_bar} четверти
-Возможные длительности {notes_in_beat}
+Возможные длительности {possible_notes_in_beat}
 Примерно {proportion_of_pauses}% пауз
 Пьеса начинается с {starting_hand} руки
 Максимум ударов одной рукой подряд {maximum_number_of_notes_played_with_one_hand_in_a_row} без учета мелизмов
@@ -18,7 +13,7 @@ comment = f'''
 Примерно {proportion_of_flams}% форшлагов
 Максимум форшлагов подряд {maximum_flams_in_a_row}
 Примерно {proportion_of_doubles}% двоек
-Аппликатура "отзеркалена" {reverse['enabled']}'''
+Аппликатура "отзеркалена" {draw_reverse_applicature['enabled']}'''
 
 print(comment)
 
@@ -34,7 +29,7 @@ for bar in piece:
         for note in beat:
             
             # вывод сгенерированной аппликатуры 
-            if not reverse['enabled']:
+            if not draw_reverse_applicature['enabled']:
                 if note['its_pause']:
                     print('_',end='')
                 elif note['its_accent']:
@@ -47,9 +42,9 @@ for bar in piece:
                 if note['its_pause']:
                     print('_',end='')
                 elif note['its_accent']:
-                    print(reverse[note['applicature']],end='')
+                    print(draw_reverse_applicature[note['applicature']],end='')
                 else:
-                    print(str.lower(reverse[note['applicature']]),end='')
+                    print(str.lower(draw_reverse_applicature[note['applicature']]),end='')
 
         print(')',end='')
 

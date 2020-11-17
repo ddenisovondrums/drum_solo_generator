@@ -1,62 +1,36 @@
 import random
+import user_settings
 
-# НАСТРОЙКИ
-user_seed = "Brother's wedding"
-bars_in_etude = 8 # Количество тактов
-beats_in_bar = [1] # Возможные размеры
-proportion_of_pauses = 20
-proportion_of_accents = 100
-proportion_of_flams = 0
-maximum_flams_in_a_row = 0
-proportion_of_doubles = 0
-maximum_number_of_notes_played_with_one_hand_in_a_row = 1
-starting_hand = ['R'] # ['R', 'L'] ['R'], ['L']
+# GENERATION OF "piece" OBJECT
+random.seed(user_settings.user_seed)
 
-enabled_notes = {
-    'eight': [True, 2],
-    'triplets': [True, 3],
-    'sixteen': [True, 4],
-    'quitniplets': [True, 5],
-    'sixteen_triplets': [True, 6],
-    
-    # will be enabled automatically
-    'two_sixteenths_with_triplet': [False, 5],
-}
+# Possible notes in beat are user-defined
+possible_notes_in_beat = []
+for enabled_note in user_settings.enabled_notes:
+    note_is_enabled = user_settings.enabled_notes[enabled_note][0]
+    notes_per_beat = user_settings.enabled_notes[enabled_note][1]
+    if user_settings.enabled_notes[enabled_note][0]:
+        possible_notes_in_beat.append(notes_per_beat)
 
-# automatic enabling 'two_sixteenths_with_triplet'
-if enabled_notes['sixteen'][0] and enabled_notes['sixteen_triplets'][0]:
-    enabled_notes['two_sixteenths_with_triplet'][0] = True
+# the piece consists of bars
+# bars are made up of beats
+# beats are made up of notes
+piece = [[[{} for note in range(random.choice(possible_notes_in_beat))] for beat in range(random.choice(user_settings.beats_in_bar))] for bar in range(user_settings.bars_in_etude)]
 
-print(enabled_notes)
-
-# ГЕНЕРАЦИЯ ФОРМЫ ПЬЕСЫ
-random.seed(user_seed)
-
-# Возможные длитлельности в доле
-notes_in_beat = []
-
-for enabled_note in enabled_notes:
-    note_is_enabled = enabled_notes[enabled_note][0]
-    notes_per_beat = enabled_notes[enabled_note][1]
-    if enabled_notes[enabled_note][0]:
-        notes_in_beat.append(notes_per_beat)
-
-piece = [[[{} for note in range(random.choice(notes_in_beat))] for beat in range(random.choice(beats_in_bar))] for bar in range(bars_in_etude)]
-
-# РАССТАНОВВКА ПАУЗ
+# pause setup
 for bar in piece:
     for beat in bar:
         for note in beat:
-            note['its_pause'] = True if random.randint(0,99) < proportion_of_pauses else False
+            note['its_pause'] = True if random.randint(0,99) < user_settings.proportion_of_pauses else False
 
-# РАССТАНОВКА АКЦЕНТОВ
+# accents setup
 for bar in piece:
     for beat in bar:
         for note in beat:
             if note['its_pause'] == False:
-                note['its_accent'] = True if random.randint(0,99) < proportion_of_accents else False
+                note['its_accent'] = True if random.randint(0,99) < user_settings.proportion_of_accents else False
 
-# РАССТАНОВКА АППЛИКАТУРЫ
+# applicature setup
 previous_note = {
     'applicature': '_',
     'its_accent': '_',
@@ -68,94 +42,94 @@ first_note_has_applicature = False
 for bar in piece:
     for beat in bar:
         for note in beat:
-            # паузы обновляют стэйт
+            # pauses update state
             if note['its_pause']:
                 previous_note['applicature'] = '_'
                 previous_note['its_accent'] = '_'
                 previous_note['overflow'] = 0
 
-            # до сюда дошли только ноты
+            # only notes have reached here
             else:
 
-                # Присваеваем аппликатуру для первой ноты
+                # assigning a applicature to the first note
                 if not first_note_has_applicature:
-                    note['applicature'] = random.choice(starting_hand)
+                    note['applicature'] = random.choice(user_settings.starting_hand)
                     first_note_has_applicature = True
                     previous_note['applicature'] = note['applicature']
                     previous_note['its_accent'] = note['its_accent']
                     previous_note['overflow'] = 1
 
-                # ноты после пауз - присваиваем случайную аппликатуру
+                # notes after pauses - assign random applicature
                 elif previous_note['applicature'] == '_':
                     note['applicature'] = 'R' if random.randint(0, 1) == 1 else 'L'
                     previous_note['applicature'] = note['applicature']
                     previous_note['its_accent'] = note['its_accent']
                     previous_note['overflow'] = 1
 
-                # ноты после ноты
+                # notes after note
                 else:
-                    # нота после одноакцентной ноты
+                    # note after one-accent note
                     if note['its_accent'] == previous_note['its_accent']:
 
-                        # рукой сыграно более {maximum_number_of_notes_played_with_one_hand_in_a_row} нот -
-                        if previous_note['overflow'] == maximum_number_of_notes_played_with_one_hand_in_a_row:
+                        # hand played over {user_settings.maximum_number_of_notes_played_with_one_hand_in_a_row} notes
+                        if previous_note['overflow'] == user_settings.maximum_number_of_notes_played_with_one_hand_in_a_row:
                             note['applicature'] = 'R' if previous_note['applicature'] == 'L' else 'L'
                             previous_note['overflow'] = 1
                             previous_note['applicature'] = note['applicature']
                         
-                        # одной рукой сыграно менее {maximum_number_of_notes_played_with_one_hand_in_a_row} нот
+                        # hand played less {user_settings.maximum_number_of_notes_played_with_one_hand_in_a_row} notes
                         else:
 
-                            # присваеваем ей случайную апликатуру
+                            # assign random applicature
                             note['applicature'] = 'R' if random.randint(0, 1) == 1 else 'L'
 
-                            # нота играется той же рукой, что и предыдущая
+                            # the note is played with the same hand as the previous one
                             if note['applicature'] == previous_note['applicature']:
                                 previous_note['overflow'] += 1
                             
-                            # нота играется противоположной рукой
+                            # a note is played with the opposite hand
                             else:
                                 previous_note['applicature'] = note['applicature']
                                 previous_note['overflow'] = 1
-                    # разноакцентные ноты
+                    # different accent notes
                     else:
                         note['applicature'] = 'R' if previous_note['applicature'] == 'L' else 'L'
                         previous_note['applicature'] = note['applicature']
                         previous_note['its_accent'] = note['its_accent']
                         previous_note['overflow'] = 1
 
-# РАССТАНОВКА ФОРШЛАГОВ
+# flams setup
 
 flam_counter = 0
 
 for bar in piece:
     for beat in bar:
         for note in beat:
-            # паузы обнуляют счетчик форшлагов
+            # pauses reset the counter
             if note['its_pause']:
                 flam_counter = 0
             
-            # до сюда дошли только ноты
+            # only notes have reached here
             else:
 
-                # Если форшлагов подряд сыграно более чем {maximum_flams_in_a_row} то нота НЕ станет форшлагом
-                if flam_counter == maximum_flams_in_a_row:
+                # If flam notes were played in a row more than{user_settings.maximum_flams_in_a_row} then the note will NOT become a flam note
+                if flam_counter == user_settings.maximum_flams_in_a_row:
                     note['its_flam'] = False
                     flam_counter = 0
                 
                 
                 else:
-                    # либо случайно присваиваем ноте форшлаг
-                    if random.randint(0,99) < proportion_of_flams:
+                    # or we accidentally assign a flam note to the note
+                    if random.randint(0,99) < user_settings.proportion_of_flams:
                         note['its_flam'] = True
                         flam_counter += 1
-                    # либо нет
+                    # or not
                     else:
                         note['its_flam'] = False
                         flam_counter = 0
 
 
-# РАССТАНОВКА ДВОЕК
+# doubles setup
 
 next_note = {
     'its_pause': True,
@@ -166,25 +140,25 @@ for bar in piece[::-1]:
     for beat in bar[::-1]:
         for note in beat[::-1]:
 
-            # паузы 
+            # pauses 
             if note['its_pause']:
-                # обновляют стэйт
+                # reset counter
                 next_note['its_pause'] = True
                 next_note['applicature'] = '_'
 
-            # форшлаги или акценты или нота перед нотой/форшлагом/акцентом играемыми той же рукой или ноты перед паузами
+            # flam notes or accents or note before a note / flam note / accent played with the same hand, or notes before rests
             elif note['its_flam'] or note['its_accent'] or next_note['applicature'] == note['applicature'] or next_note['applicature'] == '_':
-                # не могут стать двойками
+                # cannot become doubles
                 note['its_double'] = False
-                # обновляют стэйт
+                # reset counter
                 next_note['its_pause'] = False
                 next_note['applicature'] = note['applicature']
 
-            # все остальные ноты
+            # all other notes
             else:
-                # могут стать двойками
-                note['its_double'] = True if random.randrange(0, 99) < proportion_of_doubles else False
-                # обновляют стэйт 
+                # can become doubles
+                note['its_double'] = True if random.randrange(0, 99) < user_settings.proportion_of_doubles else False
+                # reset counter
                 next_note['its_pause'] = False
                 next_note['applicature'] = note['applicature']
 
