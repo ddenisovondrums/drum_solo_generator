@@ -1,10 +1,10 @@
 # SETTINGS
 user_seed = "Brother's wedding"
-bars_in_etude = 20 # number of measures in a piece 4/8/16/32
+bars_in_etude = 8 # number of measures in a piece 4/8/16/32
 beats_in_bar = [4] # possible time signatures 1/2/3/4/5/6/7/8/9
-proportion_of_pauses = 20 # 0-100
-proportion_of_accents = 20 # 0-100
-proportion_of_flams = 0 # 0-100
+proportion_of_pauses = 30 # 0-100
+proportion_of_accents = 40 # 0-100
+proportion_of_flams = 10 # 0-100
 maximum_flams_in_a_row = 1 # 1-4
 proportion_of_doubles = 50 # 0-100
 maximum_number_of_notes_played_with_one_hand_in_a_row = 2 # 1-4
@@ -13,8 +13,8 @@ starting_hand = ['R'] # ['R', 'L'] ['R'], ['L']
 # al least one of them == True
 enabled_notes = {
     'eight': [False, 2],
-    'triplets': [True, 3],
-    'sixteen': [False, 4],
+    'triplets': [False, 3],
+    'sixteen': [True, 4],
     'quitniplets': [False, 5],
     'sixteen_triplets': [False, 6],
     'septoles': [False, 7],
@@ -35,3 +35,4 @@ draw_reverse_applicature = {
 }
 
 print('COMPLETED: user_settings.py')
+

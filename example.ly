@@ -3,8 +3,8 @@
 \header{
   title = "Brother's wedding"
   composer = "www.drumsologenerator.com"
-  subsubtitle = "generation details: 1, [3, 4], 0, 50, 0, 0, 0, 1, ['R'], False" 
-}
+  subtitle = "generation details: 4, [2], 10, 10, 10, 1, 10, 1, ['R', 'L'], False" 
+  subsubtitle = \markup { \fontsize #-10"generation details:... "}}
 
 \score {
   \new RhythmicStaff {

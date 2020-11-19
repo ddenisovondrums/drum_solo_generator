@@ -10,11 +10,19 @@ f.write(f"{version}")
 
 f= open("piece.ly","a")
 
+# ноты для title
+possible_notes = []
+for enabled_note in user_settings.enabled_notes:
+  print(enabled_note)
+  if user_settings.enabled_notes[enabled_note][0]:
+    possible_notes.append(enabled_note)
+
 header = """
 \\header{{
   title = "{0}"
   composer = "www.drumsologenerator.com"
-  subsubtitle = "generation details: {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}" 
+  subsubtitle = \markup {12} \\fontsize #-5 "generation_details: {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}" {13}
+  
 }}
 """.format(
       user_settings.user_seed,  # {0}
@@ -27,7 +35,10 @@ header = """
       user_settings.proportion_of_doubles, # {7} 
       user_settings.maximum_number_of_notes_played_with_one_hand_in_a_row, # {8} 
       user_settings.starting_hand, # {9}
-      user_settings.draw_reverse_applicature['enabled']) # {10}
+      user_settings.draw_reverse_applicature['enabled'], # {10}
+      possible_notes, # {11}
+      '{', # {12}
+      '}') # {13}
 
 f.write(header)
 
