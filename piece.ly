@@ -3,15 +3,31 @@
 \header{
   title = "Brother's wedding"
   composer = "www.drumsologenerator.com"
-  subtitle = ""
-  subsubtitle = "generation details: 1, [3, 4], 0, 50, 0, 0, 0, 1, ['R'], False" 
+  subsubtitle = "generation details: 20, [4], 20, 20, 0, 1, 50, 2, ['R'], False" 
 }
 
-\drums {
-  \repeat unfold 2 {
+ \relative g'{
+    \set fontSize = -3
     \stemUp
-    sn8_"L" sn_"R" sn_"L" sn_"L" sn_"R" sn_"L" sn_"R"
-    \stemUp 
-    sn16_"L" sn_"R" sn_"L" sn_"L" sn_"R" sn_"L" sn_"R" sn_"R"
+      \tuplet 3/2 {c8_"R" c8_"R" c8_"L"^> } \tuplet 3/2 {c8:16~_"R" c8_"L"^> c8:16~_"R" } \tuplet 3/2 {c8:16~_"L" c8_"R"^> c8:16~_"L" } \tuplet 3/2 {c8_"R"^> c8_"L" c8_"R" } 
+      \tuplet 3/2 {r8 c8_"L" c8_"R" } \tuplet 3/2 {r8 c8_"L"^> c8:16~_"R" } \tuplet 3/2 {c8_"L" c8_"R" r8 } \tuplet 3/2 {c8_"R" c8_"L" c8_"R" } 
+      \tuplet 3/2 {c8_"L"^> c8_"R" c8_"R" } \tuplet 3/2 {c4_"L" c8_"L" } \tuplet 3/2 {c4_"R"^> c8_"R" } \tuplet 3/2 {c8_"L" c8_"R"^> c8_"L" } 
+      \tuplet 3/2 {c8_"L" c8_"R"^> r8 } \tuplet 3/2 {c4_"L"^> c8:16~_"R" } \tuplet 3/2 {c8_"L"^> c8:16~_"R" c8:16~_"L" } c4_"R"^> 
+      \tuplet 3/2 {c8_"R" c8_"L"^> c8_"R"^> } \tuplet 3/2 {c8_"L" c8_"R" c8:16~_"R" } \tuplet 3/2 {c8:16~_"L" c8_"R"^> r8 } \tuplet 3/2 {c8_"R" c8_"R" r8 } 
+      \tuplet 3/2 {c8_"L" c8:16~_"R" c8_"L" } c4_"R" \tuplet 3/2 {c8_"L" c8:16~_"L" c8_"R" } \tuplet 3/2 {c8:16~_"R" c8_"L"^> c8_"R" } 
+      \tuplet 3/2 {c8:16~_"R" c8_"L" c8:16~_"L" } \tuplet 3/2 {c8_"R"^> c8_"L" r8 } \tuplet 3/2 {c8_"R" c8_"L"^> c8:16~_"R" } \tuplet 3/2 {c8_"L" c8_"R"^> c8_"L" } 
+      \tuplet 3/2 {c4_"L" c8_"L" } \tuplet 3/2 {c8:16~_"R" c8_"L" c8_"R"^> } \tuplet 3/2 {c8_"L" c8:16~_"L" c8:16~_"R" } \tuplet 3/2 {c8_"L" c8_"L" c8:16~_"R" } 
+      \tuplet 3/2 {c8_"L" c8_"R"^> c8_"L" } \tuplet 3/2 {c8_"R"^> c8_"L" c8:16~_"L" } \tuplet 3/2 {c4_"R" c8_"L" } c4_"L" 
+      c4_"R" \tuplet 3/2 {c8_"R" c8:16~_"R" c8_"L" } \tuplet 3/2 {c8:16~_"R" c8:16~_"L" c8_"R" } \tuplet 3/2 {c8_"R" c8_"L" r8 } 
+      \tuplet 3/2 {r8 c8_"R" c8:16~_"R" } \tuplet 3/2 {c8_"L"^> c8:16~_"R" c8_"L" } \tuplet 3/2 {c8:16~_"L" c8_"R" c8_"L" } \tuplet 3/2 {r8 c8_"L" r8 } 
+      \tuplet 3/2 {c8_"L"^> c8:16~_"R" c8:16~_"L" } \tuplet 3/2 {c8:16~_"R" c8_"L" c8_"L" } \tuplet 3/2 {c8_"R" c8_"L"^> c8:16~_"R" } \tuplet 3/2 {c4_"L" c8:16~_"L" } 
+      \tuplet 3/2 {c8_"R"^> c8_"L" c8:16~_"L" } \tuplet 3/2 {c8_"R" c8_"R" c8_"L" } \tuplet 3/2 {c4_"L" c8_"L" } \tuplet 3/2 {c8_"R"^> c8:16~_"L" c8:16~_"R" } 
+      \tuplet 3/2 {c8_"L"^> c8:16~_"R" c8_"L"^> } \tuplet 3/2 {c8_"R" c8:16~_"L" c8:16~_"R" } \tuplet 3/2 {c4_"L" c8_"R"^> } \tuplet 3/2 {c8_"L" c8:16~_"R" c8:16~_"L" } 
+      \tuplet 3/2 {c8:16~_"R" c8_"L" c8_"R"^> } \tuplet 3/2 {c8_"L"^> c8_"L"^> c8_"R" } \tuplet 3/2 {c8:16~_"R" c8:16~_"L" c8_"R"^> } \tuplet 3/2 {c8_"L" c8:16~_"L" c8_"R" } 
+      \tuplet 3/2 {c8_"R" c8:16~_"L" c8_"R" } \tuplet 3/2 {c8_"L" c8:16~_"L" c8_"R" } \tuplet 3/2 {r8 c8_"R" c8_"R" } \tuplet 3/2 {r4 c8_"R" } 
+      \tuplet 3/2 {c4_"R" c8:16~_"L" } \tuplet 3/2 {c8_"R" c8:16~_"R" c8:16~_"L" } \tuplet 3/2 {c8_"R" c8:16~_"R" c8_"L"^> } \tuplet 3/2 {r8 c8:16~_"R" c8_"L" } 
+      \tuplet 3/2 {c8:16~_"L" c8:16~_"R" c8_"L" } \tuplet 3/2 {c8_"L" c8_"R" r8 } \tuplet 3/2 {c8_"R" c8_"R" c8_"L" } \tuplet 3/2 {c8_"R" c8_"R" c8_"L"^> } 
+      \tuplet 3/2 {c4_"L"^> c8_"R" } \tuplet 3/2 {c8_"R" c8_"L" c8_"L" } \tuplet 3/2 {c8_"R" c8_"L" c8_"L" } \tuplet 3/2 {r4 c8_"R"^> } 
+      \tuplet 3/2 {c8:16~_"L" c8_"R"^> c8_"L" } \tuplet 3/2 {r8 c8_"R" c8_"L"^> } \tuplet 3/2 {c8_"R" c8_"R" c8_"L"^> } \tuplet 3/2 {c8_"R" c8_"L" r8 } \bar "|."
   }
 }
