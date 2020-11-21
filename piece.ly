@@ -1,27 +1,20 @@
 \version "2.20.0" 
 
 \header{
-  title = "Roman Z"
+  title = "5 x 5 = 5"
   composer = "www.drumsologenerator.com"
-  subsubtitle = \markup { \fontsize #-5 "generation_details: 8, [2, 3], 10, 10, 0, 1, 0, 1, ['R'], False, ['eight', 'sixteen']" }
+  subsubtitle = \markup { \fontsize #-5 "generation_details: 5, [5], 15, 32, 0, 2, 0, 1, ['R'], False, ['quitniplets']" }
   
 }
 
  \relative g'{
     \set fontSize = -3
     \stemUp
-    \time 2/4
-      c16_"R" c16_"L" c16_"R" c16_"L" c16_"R" c16_"L" c8_"R" 
-      c16_"L" c8_"R" c16_"R" c8_"L" c8_"R" 
-    \time 3/4
-      c16_"L" c16_"R" c16_"L"^> c16_"R" c16_"L" c16_"R" c16_"L" c16_"R" c16_"L" c16_"R" c16_"L" c16_"R" 
-    \time 2/4
-      r8 c8_"R" c8_"L" c8_"R" 
-      c8_"L" c8_"R" c16_"L" c16_"R" c16_"L" c16_"R" 
-    \time 3/4
-      c16_"L" c16_"R" c16_"L" c16_"R" c8_"L" c8_"R"^> c8_"L" c16_"R" c16_"L" 
-      c8_"R" c16_"L" c16_"R" r8 c8_"L" c8_"R" c8_"L"^> 
-    \time 2/4
-      c16_"R"^> c16_"L"^> c8_"R"^> c16_"L" c8_"R" c16_"R" \bar "|."
+    \time 5/4
+      \tuplet 5/4 {c16^> c16 r16 c16 c16 }\tuplet 5/4 {c8 c16 c16 c16 }\tuplet 5/4 {r16 c16 c16^> c16^> c16 }\tuplet 5/4 {r16 c16 c8 c16 }\tuplet 5/4 {c16^> c16 c16 c16^> c16 }
+      \tuplet 5/4 {c16 c16 c16 c16 r16 }\tuplet 5/4 {r16 c16^> c8 c16^> }\tuplet 5/4 {c16^> c16 c16 c16 c16 }\tuplet 5/4 {c16 c16^> c16^> c16 c16 }\tuplet 5/4 {c16 c16 c16 c16 c16^> }
+      \tuplet 5/4 {c16^> c16 c16^> c16 c16^> }\tuplet 5/4 {c16 c16 c16 c16 c16 }\tuplet 5/4 {c16 c16^> c8 c16 }\tuplet 5/4 {c8.^> c16^> c16^> }\tuplet 5/4 {c16 c16^> c16 c16^> c16 }
+      \tuplet 5/4 {c16 c16 c8 c16 }\tuplet 5/4 {c16 c16 c16 c16 c16 }\tuplet 5/4 {c8 c16^> c16^> c16 }\tuplet 5/4 {c16 c16 c16 c16 r16 }\tuplet 5/4 {c16 c16^> c16^> c16 c16 }
+      \tuplet 5/4 {c16 c16 r8 c16 }\tuplet 5/4 {c16 c16^> c16 c16 c16 }\tuplet 5/4 {r8 c16 c16 r16 }\tuplet 5/4 {c16 c16^> c16 c16 c16^> }\tuplet 5/4 {c16^> c16 c16^> c16 c16 }\bar "|."
   }
 }

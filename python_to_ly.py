@@ -10,12 +10,7 @@ f.write(f"{version}")
 
 f= open("piece.ly","a")
 
-# ноты для title
-possible_notes = []
-for enabled_note in user_settings.enabled_notes:
-  print(enabled_note)
-  if user_settings.enabled_notes[enabled_note][0]:
-    possible_notes.append(enabled_note)
+
 
 header = """
 \\header{{
@@ -36,7 +31,7 @@ header = """
       user_settings.maximum_number_of_notes_played_with_one_hand_in_a_row, # {8} 
       user_settings.starting_hand, # {9}
       user_settings.draw_reverse_applicature['enabled'], # {10}
-      possible_notes, # {11}
+      user_settings.note_info_for_tile, # {11}
       '{', # {12}
       '}') # {13}
 
@@ -92,6 +87,40 @@ beat_draw_schemes = {
     'oooo': ['c16','c16','c16','c16'],
     '____': ['r4'],
   },
+  'quitniplets':{
+    'o____':['c4'],
+    '_____':['r4'], 
+    '____o':['r8', 'r8', 'c16'], 
+    '___o_':['r8.', 'c16', 'r16'],
+    '___oo':['r8.', 'c16', 'c16'],
+    '__o__':['r8', 'c16', 'r8'],
+    '__o_o':['r8', 'c8', 'c16'],
+    '__oo_':['r8', 'c16', 'c16', 'r16'],
+    '__ooo':['r8', 'c16', 'c16', 'c16'],
+    '_o___':['r16', 'c8', 'r8'],
+    '_o__o':['r16', 'c8.', 'c16'],
+    '_o_o_':['r16', 'c8', 'c8'],
+    '_o_oo':['r16', 'c8', 'c16', 'c16'],
+    '_oo__':['r16','c16', 'c16', 'r8'],
+    '_oo_o':['r16', 'c16', 'c8', 'c16'],
+    '_ooo_':['r16', 'c16', 'c16', 'c16', 'r16'],
+    '_oooo':['r16', 'c16', 'c16', 'c16', 'c16'],
+    'o___o':['c4', 'c16'],
+    'o__o_':['c8.', 'c16', 'r16'],
+    'o__oo':['c8.', 'c16', 'c16'],
+    'o_o__':['c8', 'c8', 'r16'],
+    'o_o_o':['c8', 'c8', 'c16'],
+    'o_oo_':['c8', 'c16', 'c16', 'r16'],
+    'o_ooo':['c8', 'c16', 'c16', 'c16'],
+    'oo___':['c16', 'c16', 'r8.'],
+    'oo__o':['c16','c16','r8','c16'],
+    'oo_o_':['c16','c8','c16','r16'],
+    'oo_oo':['c16','c16','r16','c16','c16'],
+    'ooo__':['c16','c16','c16','r8'],
+    'ooo_o':['c16','c16','c8','c16'],
+    'oooo_':['c16','c16','c16','c16','r16'],
+    'ooooo':['c16','c16','c16','c16','c16'],
+  }
 }
 
 # SCORE mid
@@ -167,6 +196,7 @@ for bar in backend.piece:
     
     # открываем нечетные группировки
     if notes_in_beat == 'triplet' and notes_in_beat_draw_scheme != 'o__' and notes_in_beat_draw_scheme != '___': beat_score += '\\tuplet 3/2 {'
+    if notes_in_beat == 'quitniplets' and notes_in_beat_draw_scheme != 'o____' and notes_in_beat_draw_scheme != '_____': beat_score += '\\tuplet 5/4 {'
 
     # соединяем ноты с их мелизмами и аппликатурой
     counter = 0
@@ -178,7 +208,6 @@ for bar in backend.piece:
         
       # погнали присоединять мелизмы
       else:
-        print(note, melismas_of_note[counter])
         # форшлаг
         if 'flam' in melismas_of_note[counter]: beat_score += '\\grace c16 '
         
@@ -190,12 +219,15 @@ for bar in backend.piece:
           if notes_in_beat == 'eight':  beat_score += f':16~'
           if notes_in_beat == 'sixteen':  beat_score += f':32~'
           if notes_in_beat == 'triplet':  beat_score += f':16~'
-        
+          if notes_in_beat == 'quitniplets':  beat_score += f':32~'
+
+
         # аппликатура
-        if 'R' in melismas_of_note[counter] and user_settings.draw_reverse_applicature['enabled']: beat_score +='_"L"'
-        elif 'L' in melismas_of_note[counter] and user_settings.draw_reverse_applicature['enabled']: beat_score +='_"Rr"'
-        elif 'R' in melismas_of_note[counter]: beat_score +='_"R"'
-        else: beat_score +='_"L"'
+        if user_settings.show_applicature_in_score:
+          if 'R' in melismas_of_note[counter] and user_settings.draw_reverse_applicature['enabled']: beat_score +='_"L"'
+          elif 'L' in melismas_of_note[counter] and user_settings.draw_reverse_applicature['enabled']: beat_score +='_"Rr"'
+          elif 'R' in melismas_of_note[counter]: beat_score +='_"R"'
+          else: beat_score +='_"L"'
 
         # акцент
         if 'accent'in melismas_of_note[counter]: beat_score += '^>'
@@ -206,8 +238,9 @@ for bar in backend.piece:
 
     # закрываем нечетные группировки
     if notes_in_beat == 'triplet' and notes_in_beat_draw_scheme != 'o__' and notes_in_beat_draw_scheme != '___': beat_score += '} '
+    if notes_in_beat == 'quitniplets' and notes_in_beat_draw_scheme != 'o____' and notes_in_beat_draw_scheme != '_____': beat_score += '}'
 
-    print(beat_score)
+    # print(beat_score)
     score += beat_score
 
 
