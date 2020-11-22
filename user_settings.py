@@ -1,9 +1,9 @@
 # SETTINGS
-user_seed = "Find a bug"
-bars_in_etude = 32 # number of measures in a piece 4/8/16/32
+user_seed = "Take seven"
+bars_in_etude = 128 # number of measures in a piece 4/8/16/32
 beats_in_bar = [1] # possible time signatures 1/2/3/4/5/6/7/8/9
 proportion_of_pauses = 30 # 0-100
-proportion_of_accents = 40 # 0-100
+proportion_of_accents = 0 # 0-100
 proportion_of_flams = 0 # 0-100
 maximum_flams_in_a_row = 2 # 1-4
 proportion_of_doubles = 100 # 0-100
@@ -16,8 +16,8 @@ enabled_notes = {
     'triplets': [False, 3],
     'sixteen': [False, 4],
     'quitniplets': [False, 5],
-    'sixteen_triplets': [True, 6],
-    'septoles': [False, 7],
+    'sixteen_triplets': [False, 6],
+    'septoles': [True, 7],
     
     # will be enabled automatically
     'two_sixteenths_with_triplet': [False, 5],
