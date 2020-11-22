@@ -1,9 +1,9 @@
 \version "2.20.0" 
 
 \header{
-  title = "5 x 5 = 5"
+  title = "Find a bug"
   composer = "www.drumsologenerator.com"
-  subsubtitle = \markup { \fontsize #-5 "generation_details: 32, [4], 40, 0, 0, 2, 0, 1, ['R'], False, ['quitniplets']" }
+  subsubtitle = \markup { \fontsize #-6 "generation_details: 32, [1], 30, 40, 0, 2, 100, 1, ['R'], False, ['sixteen_triplets'], False" }
   
 }
 
@@ -11,37 +11,37 @@
     \set fontSize = -3
     \clef percussion
     \stemUp
-      \tuplet 5/4 {r16 d16_"R" d8_"L" d16_"L" }\tuplet 5/4 {r16 d8._"R" d16_"R" }\tuplet 5/4 {d16_"L" d16_"R" d16_"L" d16_"R" d16_"L" }\tuplet 5/4 {r16 d8_"L" d16_"L" d16_"R" }
-      \tuplet 5/4 {d16_"L" d16_"R" r16 d16_"L" d16_"R" }\tuplet 5/4 {r8 d16_"L" r8 }\tuplet 5/4 {d16_"R" d16_"L" d16_"R" d16_"L" d16_"R" }\tuplet 5/4 {d16_"L" d16_"R" d16_"L" d16_"R" r16 }
-      \tuplet 5/4 {d16_"L" d8_"R" d16_"R" r16 }\tuplet 5/4 {d8_"L" d16_"L" d16_"R" r16 }\tuplet 5/4 {d8_"L" d16_"L" d16_"R" d16_"L" }\tuplet 5/4 {r16 d8_"R" d16_"R" d16_"L" }
-      \tuplet 5/4 {d16_"R" d16_"L" d16_"R" d16_"L" r16 }\tuplet 5/4 {r8 r8 d16_"R" }\tuplet 5/4 {d16_"L" d16_"R" d8_"L" d16_"L" }\tuplet 5/4 {d8._"R" d16_"R" d16_"L" }
-      \tuplet 5/4 {r16 d8_"R" d8_"L" }\tuplet 5/4 {d16_"R" d16_"L" d8_"R" d16_"R" }\tuplet 5/4 {d16_"L" d16_"R" d16_"L" d16_"R" r16 }\tuplet 5/4 {r16 d16_"R" d8_"L" d16_"L" }
-      \tuplet 5/4 {d16_"R" d16_"L" r8. }\tuplet 5/4 {d16_"R" d16_"L" r8. }\tuplet 5/4 {d16_"R" d16_"L" r16 d16_"L" d16_"R" }\tuplet 5/4 {r16 d16_"L" d16_"R" d16_"L" d16_"R" }
-      \tuplet 5/4 {r16 d8_"R" d16_"L" d16_"R" }\tuplet 5/4 {d16_"L" d16_"R" d16_"L" d16_"R" r16 }\tuplet 5/4 {r8. d16_"L" r16 }\tuplet 5/4 {d8_"R" d16_"L" d16_"R" d16_"L" }
-      \tuplet 5/4 {r16 d16_"L" d16_"R" d16_"L" r16 }\tuplet 5/4 {d16_"R" d16_"L" d8_"R" d16_"R" }\tuplet 5/4 {r16 d8_"L" d8_"L" }\tuplet 5/4 {r8 d16_"R" r8 }
-      \tuplet 5/4 {d16_"L" d8_"R" d16_"R" r16 }\tuplet 5/4 {d16_"L" d8_"R" d16_"L" r16 }\tuplet 5/4 {r8 d16_"L" d16_"R" d16_"L" }\tuplet 5/4 {d16_"R" d16_"L" d8_"R" d16_"R" }
-      \tuplet 5/4 {d16_"L" d16_"R" d16_"L" r8 }\tuplet 5/4 {d16_"R" d16_"L" d8_"R" d16_"L" }\tuplet 5/4 {d8._"R" d16_"L" r16 }\tuplet 5/4 {r16 d8._"L" d16_"L" }
-      \tuplet 5/4 {r8 r8 d16_"L" }\tuplet 5/4 {d16_"R" d16_"L" r8 d16_"R" }\tuplet 5/4 {r8. d16_"L" r16 }\tuplet 5/4 {r16 d16_"R" d8_"L" d16_"R" }
-      \tuplet 5/4 {r16 d16_"L" d16_"R" d16_"L" d16_"R" }\tuplet 5/4 {d8_"L" d16_"L" d16_"R" r16 }\tuplet 5/4 {d8_"R" d8_"R" d16_"L" }\tuplet 5/4 {d16_"R" d16_"L" d16_"R" r8 }
-      \tuplet 5/4 {d16_"R" d8_"L" d16_"R" r16 }\tuplet 5/4 {d8_"L" d16_"L" d16_"R" d16_"L" }\tuplet 5/4 {d8_"R" d16_"R" d16_"L" d16_"R" }\tuplet 5/4 {r8. d16_"L" r16 }
-      \tuplet 5/4 {r16 d16_"R" d16_"L" d16_"R" r16 }\tuplet 5/4 {r16 d16_"R" d16_"L" r8 }\tuplet 5/4 {r16 d8_"R" d8_"L" }\tuplet 5/4 {r8 d8_"L" d16_"R" }
-      \tuplet 5/4 {r8. d16_"L" d16_"R" }\tuplet 5/4 {d16_"L" d8_"R" d16_"L" r16 }\tuplet 5/4 {r16 d16_"L" d8_"R" d16_"R" }\tuplet 5/4 {d16_"L" d16_"R" d16_"L" r8 }
-      \tuplet 5/4 {r16 d8._"L" d16_"L" }\tuplet 5/4 {r16 d16_"L" d16_"R" d16_"L" r16 }\tuplet 5/4 {r16 d8_"R" d16_"L" d16_"R" }\tuplet 5/4 {r8 d8_"L" d16_"L" }
-      \tuplet 5/4 {d8_"R" d8_"L" d16_"L" }\tuplet 5/4 {d16_"R" d8_"L" d16_"R" r16 }\tuplet 5/4 {d16_"R" d16_"L" d16_"R" d16_"L" d16_"R" }\tuplet 5/4 {r16 d16_"R" d16_"L" d16_"R" r16 }
-      \tuplet 5/4 {r8 d16_"L" d16_"R" r16 }\tuplet 5/4 {r16 d16_"L" d16_"R" r8 }\tuplet 5/4 {r8. d16_"L" r16 }\tuplet 5/4 {r8 d16_"L" r8 }
-      \tuplet 5/4 {r16 d8_"R" d16_"R" d16_"L" }\tuplet 5/4 {d16_"R" d16_"L" d16_"R" d16_"L" d16_"R" }\tuplet 5/4 {d8_"L" d16_"R" d16_"L" d16_"R" }\tuplet 5/4 {d8._"L" d16_"L" d16_"R" }
-      \tuplet 5/4 {d8_"L" d16_"L" d16_"R" r16 }\tuplet 5/4 {r16 d8_"R" d8_"R" }\tuplet 5/4 {d8_"L" d16_"R" d16_"L" r16 }\tuplet 5/4 {r16 d16_"R" d16_"L" r8 }
-      \tuplet 5/4 {d16_"L" d16_"R" d16_"L" d16_"R" d16_"L" }\tuplet 5/4 {r16 d16_"L" d8_"R" d16_"R" }\tuplet 5/4 {r8 d16_"R" r8 }\tuplet 5/4 {r8 d16_"R" d16_"L" d16_"R" }
-      \tuplet 5/4 {d16_"L" d16_"R" d16_"L" d16_"R" r16 }\tuplet 5/4 {d8_"L" d8_"L" d16_"L" }\tuplet 5/4 {d16_"R" d16_"L" d16_"R" d16_"L" d16_"R" }\tuplet 5/4 {d8._"L" d16_"L" d16_"R" }
-      \tuplet 5/4 {r8. d16_"L" r16 }\tuplet 5/4 {r16 d8_"L" d16_"R" d16_"L" }\tuplet 5/4 {d16_"R" d16_"L" d16_"R" d16_"L" r16 }\tuplet 5/4 {d8._"L" d16_"L" d16_"R" }
-      \tuplet 5/4 {r8 d16_"R" d16_"L" r16 }\tuplet 5/4 {d16_"L" d16_"R" r8. }\tuplet 5/4 {d16_"R" d16_"L" d16_"R" d16_"L" d16_"R" }\tuplet 5/4 {d16_"L" d16_"R" d16_"L" d16_"R" d16_"L" }
-      \tuplet 5/4 {d8_"R" d16_"R" d16_"L" d16_"R" }\tuplet 5/4 {r16 d16_"L" d16_"R" d16_"L" d16_"R" }\tuplet 5/4 {d8_"L" d16_"R" d16_"L" d16_"R" }\tuplet 5/4 {d8_"L" d16_"L" d16_"R" d16_"L" }
-      \tuplet 5/4 {r8 r8 d16_"L" }\tuplet 5/4 {d8._"R" d16_"R" r16 }\tuplet 5/4 {r16 d8_"L" d16_"L" d16_"R" }\tuplet 5/4 {d8_"L" d16_"R" d16_"L" d16_"R" }
-      \tuplet 5/4 {d16_"L" d8_"R" d16_"R" r16 }\tuplet 5/4 {d8._"L" d16_"R" d16_"L" }\tuplet 5/4 {d16_"R" d16_"L" d16_"R" d16_"L" d16_"R" }\tuplet 5/4 {d16_"L" d16_"R" d16_"L" r8 }
-      \tuplet 5/4 {d16_"L" d16_"R" d16_"L" d16_"R" d16_"L" }\tuplet 5/4 {d16_"R" d8_"L" d16_"R" r16 }\tuplet 5/4 {r8. d16_"R" r16 }\tuplet 5/4 {d16_"R" d16_"L" r8 d16_"L" }
-      \tuplet 5/4 {r8 d16_"L" d16_"R" r16 }\tuplet 5/4 {r16 d16_"L" d16_"R" d16_"L" d16_"R" }\tuplet 5/4 {d16_"L" d16_"R" r16 d16_"R" d16_"L" }\tuplet 5/4 {d8._"R" d16_"L" d16_"R" }
-      \tuplet 5/4 {d16_"L" d16_"R" d16_"L" d16_"R" d16_"L" }\tuplet 5/4 {r16 d8_"R" d16_"R" d16_"L" }\tuplet 5/4 {r8 d8_"L" d16_"R" }\tuplet 5/4 {d8._"L" d16_"L" r16 }
-      \tuplet 5/4 {d16_"R" d16_"L" d16_"R" d16_"L" d16_"R" }\tuplet 5/4 {r16 d16_"R" d16_"L" r8 }\tuplet 5/4 {d16_"R" d16_"L" r16 d16_"R" d16_"L" }\tuplet 5/4 {d8_"R" d8_"L" r16 }
-      \tuplet 5/4 {d8_"R" d16_"R" d16_"L" d16_"R" }\tuplet 5/4 {r8 d16_"L" d16_"R" r16 }\tuplet 5/4 {r8 d16_"R" r8 }\tuplet 5/4 {r8 d16_"L" d16_"R" d16_"L" }\bar "|."
-  }
+    \time 1/4
+      \tuplet 6/4 {d16 r16 r16 r16 r16 d16:32~ }
+      \tuplet 6/4 {d16^> d16^> d16^> r16 r16 d16 }
+      \tuplet 6/4 {r16 d16^> r16 r16 r16 d16:32~ }
+      \tuplet 6/4 {d16:32~ d16:32~ d16^> r16 d16:32~ d16 }
+      \tuplet 6/4 {r16 d16:32~ d16:32~ d16 r16 d16^> }
+      \tuplet 6/4 {d16:32~ d16 r16 d16 r16 d16^> }
+      \tuplet 6/4 {d16:32~ d16^> d16 r8. }
+      \tuplet 6/4 {d16:32~ d16:32~ d16^> d16:32~ d16:32~ d16:32~ }
+      \tuplet 6/4 {d16:32~ d16^> d16^> d16:32~ d16:32~ d16^> }
+      \tuplet 6/4 {d16:32~ d16^> r16 r16 d16:32~ d16:32~ }
+      \tuplet 6/4 {d16:32~ d16:32~ d16:32~ d16 r16 r16 }
+      \tuplet 6/4 {d16^> r16 d16^> d16:32~ d16:32~ d16:32~ }
+      \tuplet 6/4 {d16^> d16 r16 r16 d16^> d16 }
+      \tuplet 6/4 {r16 d16 r16 d16:32~ d16^> r16 }
+      \tuplet 6/4 {r16 d16^> d16:32~ d16:32~ d16^> d16^> }
+      \tuplet 6/4 {d16:32~ d16 r16 d16^> d16^> r16 }
+      \tuplet 6/4 {r16 r16 d16^> d16:32~ d16 r16 }
+      \tuplet 6/4 {d16 r16 d16 r16 d16:32~ d16 }
+      \tuplet 6/4 {r16 d16:32~ d16:32~ d16:32~ d16:32~ d16 }
+      \tuplet 6/4 {r16 d16:32~ d16:32~ d16 r16 d16:32~ }
+      \tuplet 6/4 {d16^> r16 d16:32~ d16^> d16:32~ d16:32~ }
+      \tuplet 6/4 {d16^> d16:32~ d16:32~ d16^> d16:32~ d16:32~ }
+      \tuplet 6/4 {d16 r16 r16 r16 d16 r16 }
+      \tuplet 6/4 {r16 d16:32~ d16^> d16:32~ d16^> d16:32~ }
+      \tuplet 6/4 {d16:32~ d16^> d16^> d16^> r16 d16^> }
+      \tuplet 6/4 {d16^> r16 d16 r16 r16 d16:32~ }
+      \tuplet 6/4 {d16 r16 d16^> r8. }
+      \tuplet 6/4 {r16 d16^> d16^> r8. }
+      \tuplet 6/4 {d16^> d16:32~ d16^> d16:32~ d16:32~ d16^> }
+      \tuplet 6/4 {r16 d16 r16 d16^> d16 r16 }
+      \tuplet 6/4 {r16 d16^> r16 r16 d16^> r16 }
+      \tuplet 6/4 {d16^> d16 r16 r16 d16:32~ d16 }\bar "|."
 }

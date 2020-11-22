@@ -1,12 +1,12 @@
 # SETTINGS
-user_seed = "5 x 5 = 5"
+user_seed = "Find a bug"
 bars_in_etude = 32 # number of measures in a piece 4/8/16/32
-beats_in_bar = [4] # possible time signatures 1/2/3/4/5/6/7/8/9
-proportion_of_pauses = 40 # 0-100
-proportion_of_accents = 0 # 0-100
+beats_in_bar = [1] # possible time signatures 1/2/3/4/5/6/7/8/9
+proportion_of_pauses = 30 # 0-100
+proportion_of_accents = 40 # 0-100
 proportion_of_flams = 0 # 0-100
 maximum_flams_in_a_row = 2 # 1-4
-proportion_of_doubles = 0 # 0-100
+proportion_of_doubles = 100 # 0-100
 maximum_number_of_notes_played_with_one_hand_in_a_row = 1 # 1-4
 starting_hand = ['R'] # ['R', 'L'] ['R'], ['L']
 
@@ -15,8 +15,8 @@ enabled_notes = {
     'eight': [False, 2],
     'triplets': [False, 3],
     'sixteen': [False, 4],
-    'quitniplets': [True, 5],
-    'sixteen_triplets': [False, 6],
+    'quitniplets': [False, 5],
+    'sixteen_triplets': [True, 6],
     'septoles': [False, 7],
     
     # will be enabled automatically
@@ -40,7 +40,7 @@ draw_reverse_applicature = {
     'L': 'R'
 }
 
-show_applicature_in_score = True
+show_applicature_in_score = False
 
 print('COMPLETED: user_settings.py')
 

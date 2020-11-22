@@ -16,7 +16,7 @@ header = """
 \\header{{
   title = "{0}"
   composer = "www.drumsologenerator.com"
-  subsubtitle = \markup {12} \\fontsize #-5 "generation_details: {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}" {13}
+  subsubtitle = \markup {12} \\fontsize #-6 "generation_details: {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {14}" {13}
   
 }}
 """.format(
@@ -33,7 +33,8 @@ header = """
       user_settings.draw_reverse_applicature['enabled'], # {10}
       user_settings.note_info_for_tile, # {11}
       '{', # {12}
-      '}') # {13}
+      '}', # {13}
+      user_settings.show_applicature_in_score) # {14}
 
 f.write(header)
 
@@ -121,6 +122,79 @@ beat_draw_schemes = {
     'ooo_o':['d16','d16','d8','d16'],
     'oooo_':['d16','d16','d16','d16','r16'],
     'ooooo':['d16','d16','d16','d16','d16'],
+  },
+  'sixteen_triplets':{
+    '______': ['r4'],
+    '_____o': ['r8.', 'r16', 'r16','d16'],
+    '____o_': ['r8.', 'r16', 'd16', 'r16'],
+    '____oo': ['r8.', 'r16', 'd16', 'd16'],
+    '___o__': ['r8.', 'd16', 'r16', 'r16'],
+    '___o_o': ['r8.', 'd8', 'd16'],
+    '___oo_': ['r8.', 'd16', 'd16', 'r16'],
+    '___ooo': ['r8.', 'd16', 'd16', 'd16'],
+
+    '__o___': ['r16', 'r16','d16', 'r8.'],
+    '__o__o': ['r16', 'r16','d16', 'r16', 'r16','d16'],
+    '__o_o_': ['r16', 'r16','d16', 'r16', 'd16','r16',],
+    '__o_oo': ['r16', 'r16','d16', 'r16', 'd16','d16',],
+    '__oo__': ['r16', 'r16','d16', 'd16', 'r16','r16'],
+    '__oo_o': ['r16', 'r16','d16', 'd16', 'r16','d16'],
+    '__ooo_': ['r16', 'r16','d16', 'd16', 'd16','r16'],
+    '__oooo': ['r16', 'r16','d16', 'd16', 'd16','d16'],
+
+    '_o____': ['r16', 'd16','r16', 'r8.'],
+    '_o___o': ['r16', 'd16','r16', 'r16', 'r16','d16'],
+    '_o__o_': ['r16', 'd16','r16', 'r16', 'd16','r16'],
+    '_o__oo': ['r16', 'd16','r16', 'r16', 'd16','d16'],
+    '_o_o__': ['r16', 'd16','r16', 'd16', 'r16','r16'],
+    '_o_o_o': ['r16', 'd16','r16', 'd16', 'r16','d16'],
+    '_o_oo_': ['r16', 'd16','r16', 'd16', 'd16','r16'],
+    '_o_ooo': ['r16', 'd16','r16', 'd16', 'd16','d16'],
+
+    '_oo___': ['r16', 'd16','d16', 'r8.'],
+    '_oo__o': ['r16', 'd16','d16', 'r16', 'r16','d16'],
+    '_oo_o_': ['r16', 'd16','d16', 'r16', 'd16','r16'],
+    '_oo_oo': ['r16', 'd16','d16', 'r16', 'd16','d16'],
+    '_ooo__': ['r16', 'd16','d16', 'd16', 'r16','r16'],
+    '_ooo_o': ['r16', 'd16','d16', 'd16', 'r16','d16'],
+    '_oooo_': ['r16', 'd16','d16', 'd16', 'd16','r16'],
+    '_ooooo': ['r16', 'd16','d16', 'd16', 'd16','d16'],
+
+    'o_____': ['d4'],
+    'o____o': ['d16', 'r16','r16', 'r16', 'r16','d16'],
+    'o___o_': ['d16', 'r16','r16', 'r16', 'd16','r16'],
+    'o___oo': ['d16', 'r16','r16', 'r16', 'd16','d16'],
+    'o__o__': ['d16', 'r16','r16', 'd16', 'r16','r16'],
+    'o__o_o': ['d16', 'r16','r16', 'd16', 'r16','d16'],
+    'o__oo_': ['d16', 'r16','r16', 'd16', 'd16','r16'],
+    'o__ooo': ['d16', 'r16','r16', 'd16', 'd16','d16'],
+
+    'o_o___': ['d16', 'r16','d16', 'r8.'],
+    'o_o__o': ['d16', 'r16','d16', 'r16', 'r16','d16'],
+    'o_o_o_': ['d16', 'r16','d16', 'r16', 'd16','r16'],
+    'o_o_oo': ['d16', 'r16','d16', 'r16', 'd16','d16'],
+    'o_oo__': ['d16', 'r16','d16', 'd16', 'r16','r16'],
+    'o_oo_o': ['d16', 'r16','d16', 'd16', 'r16','d16'],
+    'o_ooo_': ['d16', 'r16','d16', 'd16', 'd16','r16'],
+    'o_oooo': ['d16', 'r16','d16', 'd16', 'd16','d16'],
+
+    'oo____': ['d16', 'd16','r16', 'r8.'],
+    'oo___o': ['d16', 'd16','r16', 'r16', 'r16','d16'],
+    'oo__o_': ['d16', 'd16','r16', 'r16', 'd16','r16'],
+    'oo__oo': ['d16', 'd16','r16', 'r16', 'd16','d16'],
+    'oo_o__': ['d16', 'd16','r16', 'd16', 'r16','r16'],
+    'oo_o_o': ['d16', 'd16','r16', 'd16', 'r16','d16'],
+    'oo_oo_': ['d16', 'd16','r16', 'd16', 'd16','r16'],
+    'oo_ooo': ['d16', 'd16','r16', 'd16', 'd16','d16'],
+
+    'ooo___': ['d16', 'd16','d16', 'r8.'],
+    'ooo__o': ['d16', 'd16','d16', 'r16', 'r16','d16'],
+    'ooo_o_': ['d16', 'd16','d16', 'r16', 'd16','r16'],
+    'ooo_oo': ['d16', 'd16','d16', 'r16', 'd16','d16'],
+    'oooo__': ['d16', 'd16','d16', 'd16', 'r16','r16'],
+    'oooo_o': ['d16', 'd16','d16', 'd16', 'r16','d16'],
+    'ooooo_': ['d16', 'd16','d16', 'd16', 'd16','r16'],
+    'oooooo': ['d16', 'd16','d16', 'd16', 'd16','d16'],
   }
 }
 
@@ -190,7 +264,7 @@ for bar in backend.piece:
         current_note_melismas.append(note['applicature'])
     
     # у нас есть схема отрисовки нот и мелизмы всех нот
-    # print(beat_draw_schemes[notes_in_beat][notes_in_beat_draw_scheme],end=' ')
+    # print(beat_draw_schemes[notes_in_beat][notes_in_beat_draw_scheme])
     # print(melismas_of_note)
 
     beat_score = ''
@@ -198,6 +272,7 @@ for bar in backend.piece:
     # открываем нечетные группировки
     if notes_in_beat == 'triplet' and notes_in_beat_draw_scheme != 'o__' and notes_in_beat_draw_scheme != '___': beat_score += '\\tuplet 3/2 {'
     if notes_in_beat == 'quitniplets' and notes_in_beat_draw_scheme != 'o____' and notes_in_beat_draw_scheme != '_____': beat_score += '\\tuplet 5/4 {'
+    if notes_in_beat == 'sixteen_triplets' and notes_in_beat_draw_scheme != 'o_____' and notes_in_beat_draw_scheme != '______': beat_score += '\\tuplet 6/4 {'
 
     # соединяем ноты с их мелизмами и аппликатурой
     counter = 0
@@ -221,6 +296,7 @@ for bar in backend.piece:
           if notes_in_beat == 'sixteen':  beat_score += f':32~'
           if notes_in_beat == 'triplet':  beat_score += f':16~'
           if notes_in_beat == 'quitniplets':  beat_score += f':32~'
+          if notes_in_beat == 'sixteen_triplets':  beat_score += f':32~'
 
 
         # аппликатура
@@ -240,6 +316,7 @@ for bar in backend.piece:
     # закрываем нечетные группировки
     if notes_in_beat == 'triplet' and notes_in_beat_draw_scheme != 'o__' and notes_in_beat_draw_scheme != '___': beat_score += '} '
     if notes_in_beat == 'quitniplets' and notes_in_beat_draw_scheme != 'o____' and notes_in_beat_draw_scheme != '_____': beat_score += '}'
+    if notes_in_beat == 'sixteen_triplets' and notes_in_beat_draw_scheme != 'o_____' and notes_in_beat_draw_scheme != '______': beat_score += '}'
 
     # print(beat_score)
     score += beat_score
@@ -250,7 +327,6 @@ for bar in backend.piece:
 
 ######################## SCORE end ###########################
 score += r'''\bar "|."
-  }
 }'''
 ##############################################################
 
