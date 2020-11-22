@@ -3,7 +3,7 @@
 \header{
   title = "Take seven"
   composer = "www.drumsologenerator.com"
-  subsubtitle = \markup { \fontsize #-6 "generation_details: 128, [1], 30, 0, 0, 2, 100, 1, ['R'], False, ['septoles'], False" }
+  subsubtitle = \markup { \fontsize #-6 "generation_details: 128, [1], 40, 0, 0, 2, 0, 1, ['R'], False, ['quitniplets'], False" }
   
 }
 
@@ -12,132 +12,132 @@
     \clef percussion
     \stemUp
     \time 1/4
-      \tuplet 7/4 {d16:32~ d16:32~ d8 d16:32~ d16 r16 }
-      \tuplet 7/4 {r16 d16 r16 d16 r16 d16 r16 }
-      \tuplet 7/4 {d16:32~ d16 r16 d16:32~ d16:32~ d16 r16 }
-      \tuplet 7/4 {d16:32~ d16:32~ d8 r16 d16 r16 }
-      \tuplet 7/4 {r16 d16:32~ d16:32~ d16:32~ d16:32~ d16 r16 }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16 r8 d16 r16 d16:32~ }
-      \tuplet 7/4 {d16:32~ d16 r16 d16:32~ d16:32~ d16 r16 }
-      \tuplet 7/4 {d16:32~ d16 r8 d16:32~ d16:32~ d16 }
-      \tuplet 7/4 {r8 d16:32~ d16 r16 d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16 r16 d16 }
-      \tuplet 7/4 {r16 d16 r8 r8 d16:32~ }
-      \tuplet 7/4 {d16:32~ d16 r8 r8. }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16 r16 d16:32~ d16:32~ }
-      \tuplet 7/4 {d8 d16:32~ d16 r16 d16:32~ d16 }
-      \tuplet 7/4 {r8 d16:32~ d16 r16 d16 r16 }
-      \tuplet 7/4 {d8 d16:32~ d16 r8. }
-      \tuplet 7/4 {d8 d8 d16 r16 d16:32~ }
-      \tuplet 7/4 {d8 d16:32~ d16:32~ d16:32~ d16 r16 }
-      \tuplet 7/4 {d16:32~ d16:32~ d8 d16:32~ d16 r16 }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d8 d16:32~ d16:32~ d16 r16 d16:32~ }
-      \tuplet 7/4 {d8 d16:32~ d16 r16 d16 r16 }
-      \tuplet 7/4 {d16:32~ d16 r16 d16:32~ d16 r16 d16:32~ }
-      \tuplet 7/4 {d16:32~ d16 r16 d16:32~ d16:32~ d16 r16 }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16 r16 d16:32~ d16:32~ d16 r16 }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16 r16 d16 r16 }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d8. }
-      \tuplet 7/4 {r16 d16 r16 d16:32~ d16:32~ d16 r16 }
-      \tuplet 7/4 {d8 r16 d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16 r16 d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16 r8 d16 }
-      \tuplet 7/4 {r8 d16:32~ d16:32~ d16 r16 d16:32~ }
-      \tuplet 7/4 {d16:32~ d16 r16 d16 r16 d16:32~ d16 }
-      \tuplet 7/4 {r16 d16:32~ d16:32~ d16 r16 d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16 r16 }
-      \tuplet 7/4 {r8 d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16 r16 d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16 r16 d16 r16 }
-      \tuplet 7/4 {d8 d8 r16 d16 r16 }
-      \tuplet 7/4 {r16 d16 r16 d16 r8 d16:32~ }
-      \tuplet 7/4 {d8 d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d8 d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d8 d16:32~ d16 r16 d16:32~ d16 }
-      \tuplet 7/4 {r8 d16:32~ d16 r8 d16 }
-      \tuplet 7/4 {r16 d16:32~ d16:32~ d16:32~ d16:32~ d16 r16 }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16 r16 d16:32~ d16 }
-      \tuplet 7/4 {r16 d16:32~ d8 d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d8 d16:32~ d16 r16 }
-      \tuplet 7/4 {r16 d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16 r8 d16:32~ d16 r16 }
-      \tuplet 7/4 {d16:32~ d16 r16 d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16 r16 d16:32~ d16:32~ d16:32~ d16 }
-      \tuplet 7/4 {r16 d16:32~ d16:32~ d16:32~ d16 r16 d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16 r16 d16 r16 }
-      \tuplet 7/4 {d8 d8 d16:32~ d16 r16 }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16 r16 d16 }
-      \tuplet 7/4 {r16 d16 r16 d16 r8 d16:32~ }
-      \tuplet 7/4 {d16:32~ d16 r16 d16 r16 d16 r16 }
-      \tuplet 7/4 {r8 d16:32~ d16:32~ d8. }
-      \tuplet 7/4 {d8 d16:32~ d16:32~ d16 r16 d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16 }
-      \tuplet 7/4 {r16 d16 r16 d16 r16 d16 r16 }
-      \tuplet 7/4 {r16 d16:32~ d8 d16 r16 d16:32~ }
-      \tuplet 7/4 {d8 d16:32~ d16 r16 d16:32~ d16 }
-      \tuplet 7/4 {r16 d16 r16 d16:32~ d16 r16 d16:32~ }
-      \tuplet 7/4 {d16:32~ d16 r16 d16:32~ d16:32~ d16 r16 }
-      \tuplet 7/4 {d8 d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d8 r16 d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d8 d8 d16:32~ d16 r16 }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16 r16 }
-      \tuplet 7/4 {d16:32~ d16:32~ d8 d16:32~ d16:32~ d16 }
-      \tuplet 7/4 {r16 d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16 }
-      \tuplet 7/4 {r16 d16:32~ d8 d16:32~ d16 r16 }
-      \tuplet 7/4 {r16 d16 r16 d16:32~ d16:32~ d16:32~ d16 }
-      \tuplet 7/4 {r16 d16:32~ d16:32~ d16:32~ d16 r16 d16:32~ }
-      \tuplet 7/4 {d8 r16 d16 r16 d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16 r16 d16 r16 }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16 r16 d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16 r16 }
-      \tuplet 7/4 {r8 r8 r16 d16 r16 }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d8. }
-      \tuplet 7/4 {d8 d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16 r16 d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16 }
-      \tuplet 7/4 {r8 d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d8 d16:32~ d16:32~ d16:32~ d16 r16 }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16 }
-      \tuplet 7/4 {r16 d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16 }
-      \tuplet 7/4 {r16 d16:32~ d16:32~ d16 r16 d16:32~ d16 }
-      \tuplet 7/4 {r8 d16:32~ d16:32~ d16:32~ d16 r16 }
-      \tuplet 7/4 {d8 d16:32~ d16:32~ d16 r16 d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d8 r8 d16:32~ }
-      \tuplet 7/4 {d16:32~ d16 r8 d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d8 r16 d16 r16 d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16 r16 }
-      \tuplet 7/4 {r16 d16 r8 d16:32~ d16:32~ d16 }
-      \tuplet 7/4 {r8 d8 d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16 r8 d16 }
-      \tuplet 7/4 {r8 d16:32~ d16 r16 d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d8 r16 d16 r16 }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d8 d8 d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16 r16 d16 r16 d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16 r8. }
-      \tuplet 7/4 {d8 d16:32~ d16:32~ d8. }
-      \tuplet 7/4 {d8 d8 r16 d16:32~ d16 }
-      \tuplet 7/4 {r16 d16:32~ d16:32~ d16:32~ d16:32~ d16 r16 }
-      \tuplet 7/4 {r16 d16:32~ d8 d8. }
-      \tuplet 7/4 {d8 d16:32~ d16:32~ d16:32~ d16:32~ d16 }
-      \tuplet 7/4 {r16 d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d8 d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d8 d16:32~ d16:32~ d16 }
-      \tuplet 7/4 {r16 d16:32~ d16:32~ d16:32~ d16 r16 d16:32~ }
-      \tuplet 7/4 {d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16:32~ d16 }
-      \tuplet 7/4 {r16 d16:32~ d16:32~ d16 r16 d16:32~ d16:32~ }
-      \tuplet 7/4 {d8 d16:32~ d16:32~ d16:32~ d16 r16 }
-      \tuplet 7/4 {r16 d16:32~ d8 r16 d16 r16 }
-      \tuplet 7/4 {d8 d16:32~ d16 r8. }
-      \tuplet 7/4 {d16:32~ d16:32~ d8 d16:32~ d16 r16 }
-      \tuplet 7/4 {d16:32~ d16 r8 r16 d16:32~ d16 }
-      \tuplet 7/4 {r16 d16:32~ d16:32~ d16:32~ d8. }\bar "|."
+      \tuplet 5/4 {d16 d16 d16 r16 d16 }
+      \tuplet 5/4 {d8 r16 d16 r16 }
+      \tuplet 5/4 {d8 d8. }
+      \tuplet 5/4 {r8 d8. }
+      \tuplet 5/4 {r16 d16 r16 d16 r16 }
+      \tuplet 5/4 {r16 d16 r8. }
+      \tuplet 5/4 {d16 d16 d16 d16 r16 }
+      \tuplet 5/4 {d16 d16 r16 d16 r16 }
+      \tuplet 5/4 {d16 d16 d8. }
+      \tuplet 5/4 {r16 d16 r16 d16 d16 }
+      \tuplet 5/4 {d8 d16 d16 d16 }
+      \tuplet 5/4 {r16 d16 d8. }
+      \tuplet 5/4 {d16 d16 d8. }
+      \tuplet 5/4 {r16 d16 r8. }
+      \tuplet 5/4 {d8 d16 d16 d16 }
+      \tuplet 5/4 {r16 d16 r16 d16 r16 }
+      \tuplet 5/4 {r8 r16 d16 d16 }
+      d4 
+      \tuplet 5/4 {r8 d16 d16 d16 }
+      \tuplet 5/4 {r8 d16 d16 r16 }
+      \tuplet 5/4 {d16 d16 r16 d16 d16 }
+      \tuplet 5/4 {r8 d8. }
+      \tuplet 5/4 {d8 r8 d16 }
+      \tuplet 5/4 {d8 r8 d16 }
+      \tuplet 5/4 {r16 d16 r16 d16 r16 }
+      \tuplet 5/4 {d16 d16 r16 d16 d16 }
+      \tuplet 5/4 {d8 r16 d16 d16 }
+      \tuplet 5/4 {r8 d16 d16 r16 }
+      \tuplet 5/4 {r16 d16 d16 d16 d16 }
+      \tuplet 5/4 {d16 d16 d16 r16 d16 }
+      \tuplet 5/4 {d16 d16 r16 d16 d16 }
+      \tuplet 5/4 {r16 d16 d16 r16 d16 }
+      \tuplet 5/4 {r8 d16 r16 d16 }
+      \tuplet 5/4 {d8 d16 d16 r16 }
+      \tuplet 5/4 {r16 d16 d16 d16 r16 }
+      \tuplet 5/4 {d16 d16 d16 d16 r16 }
+      \tuplet 5/4 {d16 d16 d16 d16 r16 }
+      \tuplet 5/4 {r16 d16 r8 d16 }
+      \tuplet 5/4 {d16 d16 d16 r16 d16 }
+      \tuplet 5/4 {r16 d16 d16 r16 d16 }
+      \tuplet 5/4 {d8 r8 d16 }
+      \tuplet 5/4 {r16 d16 d16 d16 r16 }
+      \tuplet 5/4 {d8 r16 d16 d16 }
+      \tuplet 5/4 {d16 d16 d16 d16 d16 }
+      \tuplet 5/4 {r16 d16 r16 d16 r16 }
+      \tuplet 5/4 {d16 d16 d8. }
+      \tuplet 5/4 {d8 r16 d16 d16 }
+      \tuplet 5/4 {d8 d16 d16 d16 }
+      \tuplet 5/4 {r16 d16 r16 d16 d16 }
+      \tuplet 5/4 {r16 d16 d16 d16 r16 }
+      \tuplet 5/4 {d16 d16 d16 d16 d16 }
+      \tuplet 5/4 {d16 d16 r8. }
+      \tuplet 5/4 {r16 d16 d16 r16 d16 }
+      \tuplet 5/4 {d8 d16 r16 d16 }
+      \tuplet 5/4 {d16 d16 d16 d16 d16 }
+      \tuplet 5/4 {d16 d16 d16 d16 d16 }
+      \tuplet 5/4 {d8 r16 d16 r16 }
+      \tuplet 5/4 {r8 d16 r16 d16 }
+      \tuplet 5/4 {r8 d8. }
+      \tuplet 5/4 {d8 d8. }
+      \tuplet 5/4 {d16 d16 r16 d16 d16 }
+      \tuplet 5/4 {d16 d16 d16 d16 d16 }
+      \tuplet 5/4 {d8 d16 d16 d16 }
+      \tuplet 5/4 {d8 r16 d16 r16 }
+      \tuplet 5/4 {d16 d16 r8 d16 }
+      \tuplet 5/4 {d8 r16 d16 r16 }
+      \tuplet 5/4 {d16 d16 d16 d16 d16 }
+      \tuplet 5/4 {r16 d16 d16 d16 d16 }
+      \tuplet 5/4 {d16 d16 d16 d16 d16 }
+      \tuplet 5/4 {d16 d16 d16 d16 d16 }
+      \tuplet 5/4 {d16 d16 d16 d16 r16 }
+      \tuplet 5/4 {d16 d16 r16 d16 d16 }
+      \tuplet 5/4 {r16 d16 d16 d16 d16 }
+      \tuplet 5/4 {d16 d16 r16 d16 d16 }
+      \tuplet 5/4 {r8 r16 d16 d16 }
+      \tuplet 5/4 {d16 d16 d16 d16 d16 }
+      \tuplet 5/4 {r8 d16 d16 r16 }
+      \tuplet 5/4 {d16 d16 r16 d16 d16 }
+      \tuplet 5/4 {d16 d16 d16 d16 r16 }
+      \tuplet 5/4 {d16 d16 d8. }
+      \tuplet 5/4 {d16 d16 d16 d16 r16 }
+      \tuplet 5/4 {r16 d16 r16 d16 d16 }
+      \tuplet 5/4 {r16 d16 r16 d16 r16 }
+      \tuplet 5/4 {d8 d16 d16 r16 }
+      \tuplet 5/4 {r16 d16 d8. }
+      \tuplet 5/4 {r8 r16 d16 r16 }
+      \tuplet 5/4 {d8 r16 d16 d16 }
+      \tuplet 5/4 {d8 d16 r16 d16 }
+      \tuplet 5/4 {r8 r8 d16 }
+      \tuplet 5/4 {d8 r16 d16 r16 }
+      \tuplet 5/4 {d8 d16 r16 d16 }
+      \tuplet 5/4 {d16 d16 d16 r16 d16 }
+      \tuplet 5/4 {d16 d16 r16 d16 r16 }
+      \tuplet 5/4 {d8 d8. }
+      \tuplet 5/4 {r16 d16 r8. }
+      \tuplet 5/4 {d16 d16 r16 d16 r16 }
+      \tuplet 5/4 {r16 d16 r8. }
+      \tuplet 5/4 {r16 d16 d16 r16 d16 }
+      \tuplet 5/4 {r16 d16 r8 d16 }
+      \tuplet 5/4 {r8 d16 r16 d16 }
+      \tuplet 5/4 {d16 d16 d16 r16 d16 }
+      \tuplet 5/4 {r8 d16 r16 d16 }
+      \tuplet 5/4 {d16 d16 r16 d16 r16 }
+      \tuplet 5/4 {r16 d16 r16 d16 d16 }
+      \tuplet 5/4 {r16 d16 d16 d16 r16 }
+      \tuplet 5/4 {d16 d16 r8 d16 }
+      \tuplet 5/4 {d16 d16 r16 d16 d16 }
+      \tuplet 5/4 {d8 r16 d16 r16 }
+      \tuplet 5/4 {d16 d16 r16 d16 d16 }
+      \tuplet 5/4 {r8 r8 d16 }
+      \tuplet 5/4 {r16 d16 d16 r16 d16 }
+      \tuplet 5/4 {d16 d16 r8 d16 }
+      \tuplet 5/4 {d8 r16 d16 r16 }
+      \tuplet 5/4 {d16 d16 d16 d16 r16 }
+      \tuplet 5/4 {d8 d16 r16 d16 }
+      \tuplet 5/4 {d16 d16 d16 r16 d16 }
+      \tuplet 5/4 {d16 d16 r16 d16 d16 }
+      \tuplet 5/4 {d16 d16 r8. }
+      \tuplet 5/4 {r8 r16 d16 r16 }
+      \tuplet 5/4 {d16 d16 d16 d16 d16 }
+      \tuplet 5/4 {r8 d8. }
+      \tuplet 5/4 {d16 d16 d16 d16 d16 }
+      \tuplet 5/4 {d16 d16 r8 d16 }
+      \tuplet 5/4 {d16 d16 d16 d16 d16 }
+      \tuplet 5/4 {d8 d8. }
+      \tuplet 5/4 {d16 d16 d16 d16 r16 }
+      \tuplet 5/4 {d16 d16 d16 d16 r16 }
+      \tuplet 5/4 {d16 d16 d16 r16 d16 }\bar "|."
 }
