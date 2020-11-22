@@ -1,9 +1,9 @@
 # SETTINGS
 user_seed = "5 x 5 = 5"
-bars_in_etude = 5 # number of measures in a piece 4/8/16/32
-beats_in_bar = [5] # possible time signatures 1/2/3/4/5/6/7/8/9
-proportion_of_pauses = 15 # 0-100
-proportion_of_accents = 32 # 0-100
+bars_in_etude = 32 # number of measures in a piece 4/8/16/32
+beats_in_bar = [4] # possible time signatures 1/2/3/4/5/6/7/8/9
+proportion_of_pauses = 40 # 0-100
+proportion_of_accents = 0 # 0-100
 proportion_of_flams = 0 # 0-100
 maximum_flams_in_a_row = 2 # 1-4
 proportion_of_doubles = 0 # 0-100
@@ -40,7 +40,7 @@ draw_reverse_applicature = {
     'L': 'R'
 }
 
-show_applicature_in_score = False
+show_applicature_in_score = True
 
 print('COMPLETED: user_settings.py')
 
