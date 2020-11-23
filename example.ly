@@ -27,15 +27,15 @@
     %   c16 c16 c16 c16
     %   \tuplet 5/4 {c16 c16 c16 c16 c16}
     %   \tuplet 6/4 {c16 c16 c16 c16 c16 c16}
-    %   c16 c16 \tuplet 3/2 {c16 c16 c16}
     %   \tuplet 7/4 {c16 c16 c16 c16 c16 c16 c16}
-    %   \tuplet 3/2 {c16 c16 c16} c16 c16
     % \time 1/4
     %   \grace c16 c2:32~_"R"^>
     %   \grace c16 c2:32~_"R"^> 
     % \time 1/4
     %   c8.
-      \tuplet 7/4 {r8 r8 d8.}
+      \tuplet 5/4 {c16 c16 c16 c16 c16}
+      \tuplet 3/2 {c16 c16 c16} c16 c16
+      c16 c16 \tuplet 3/2 {c16 c16 c16}
       d4
     }
 }

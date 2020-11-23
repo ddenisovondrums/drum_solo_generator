@@ -1,11 +1,11 @@
 # SETTINGS
-user_seed = "Take seven"
-bars_in_etude = 128 # number of measures in a piece 4/8/16/32
-beats_in_bar = [1] # possible time signatures 1/2/3/4/5/6/7/8/9
-proportion_of_pauses = 40 # 0-100
-proportion_of_accents = 0 # 0-100
+user_seed = "Hate five!"
+bars_in_etude = 16 # number of measures in a piece 4/8/16/32
+beats_in_bar = [2] # possible time signatures 1/2/3/4/5/6/7/8/9
+proportion_of_pauses = 3 # 0-100
+proportion_of_accents = 35  # 0-100
 proportion_of_flams = 0 # 0-100
-maximum_flams_in_a_row = 2 # 1-4
+maximum_flams_in_a_row = 1 # 1-4
 proportion_of_doubles = 0 # 0-100
 maximum_number_of_notes_played_with_one_hand_in_a_row = 1 # 1-4
 starting_hand = ['R'] # ['R', 'L'] ['R'], ['L']
