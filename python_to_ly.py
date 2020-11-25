@@ -47,11 +47,13 @@ f.write(header)
 score = r'''
  \relative c'{
     \set fontSize = -3
-    \clef percussion
-    \stemUp'''
+    \clef percussion 
+    \stemUp
+    '''
 
 ###############################################################
 
+score += f'\\tempo 4 = {user_settings.tempo}'
 
 
 beat_draw_schemes = {
@@ -456,7 +458,7 @@ for bar in backend.piece:
       else: notes_in_beat = random.choice(['two_sixteenths_with_triplet','triplet_with_two_sixteens'])
     # выяснили что за длительности в доле
 
-    print(notes_in_beat)
+    # print(notes_in_beat)
 
     # решаем как будем рисовать долю (объединять мелкие паузы/ноты в более крупные длительности)
     notes_in_beat_draw_scheme = ''

@@ -1,31 +1,19 @@
 \version "2.20.0" 
 
 \header{
-  title = "Hate five!"
+  title = "Ted reed turn 2"
   composer = "www.drumsologenerator.com"
-  subsubtitle = \markup { \fontsize #-6 "generation_details: 16, [2], 3, 35, 0, 1, 0, 1, ['R'], False, ['quitniplets'], False" }
+  subsubtitle = \markup { \fontsize #-6 "generation_details: 4, [4], 45, 0, 0, 1, 0, 1, ['R'], False, ['eight'], False" }
   
 }
 
  \relative c'{
     \set fontSize = -3
-    \clef percussion
+    \clef percussion 
     \stemUp
-    \time 2/4
-      \tuplet 5/4 {d16^> d16 d16 d16 d16 }\tuplet 5/4 {r16 d16 d16 d16 d16 }
-      \tuplet 5/4 {d16 d16^> d16^> d16 d16 }\tuplet 5/4 {d16 d16^> d16^> d16^> d16 }
-      \tuplet 5/4 {d16 d16^> d16 d16^> d16 }\tuplet 5/4 {d16^> d16 d16 d16^> d16^> }
-      \tuplet 5/4 {d16 d16^> d16 d16 d16 }\tuplet 5/4 {d16 d16 d16 d16 d16 }
-      \tuplet 5/4 {d16 d16 d16 d16 d16 }\tuplet 5/4 {d16 d16 d16^> d16^> d16 }
-      \tuplet 5/4 {d16 d16^> d16 d16^> d16 }\tuplet 5/4 {d16^> d16 d16 d16 d16 }
-      \tuplet 5/4 {d16 d16 d16^> d16 d16 }\tuplet 5/4 {d16^> d16 d16^> d16^> d16^> }
-      \tuplet 5/4 {d16 d16^> d16 d16^> d16 }\tuplet 5/4 {d16^> d16^> d16^> d16 d16 }
-      \tuplet 5/4 {r16 d16^> d16 d16 d16 }\tuplet 5/4 {d16 d16^> d16 d16^> d16 }
-      \tuplet 5/4 {d16 d16 d16 d16 r16 }\tuplet 5/4 {d16 d16 d16^> d16^> d16^> }
-      \tuplet 5/4 {d16 d16^> d16^> d16 d16^> }\tuplet 5/4 {d16 d16^> d16 d16^> d16 }
-      \tuplet 5/4 {d16^> d16 d16 d16 d16 }\tuplet 5/4 {d16 d16 r16 d16 d16 }
-      \tuplet 5/4 {d16^> d16^> d16 d16 r16 }\tuplet 5/4 {d16^> d16 d16 d16 d16 }
-      \tuplet 5/4 {d16^> d16^> d16^> r16 d16^> }\tuplet 5/4 {d16^> d16 d16^> d16 d16 }
-      \tuplet 5/4 {d16 d16^> d16 d16^> d16 }\tuplet 5/4 {d16^> d16^> d16 d16^> d16 }
-      \tuplet 5/4 {d16 d16^> d16^> d16 d16 }\tuplet 5/4 {r16 d16^> d16 d16 d16^> }\bar "|."
+    \tempo 4 = 348
+      d4 r4 r8 d8 r4 
+      r4 r8 d8 r8 d8 d4 
+      r4 d8 d8 d4 r8 d8 
+      d4 d8 d8 r4 r8 d8 \bar "|."
 }

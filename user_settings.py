@@ -1,9 +1,13 @@
+from math import floor
+from subprocess import Popen
+
 # SETTINGS
-user_seed = "Hate five!"
-bars_in_etude = 16 # number of measures in a piece 4/8/16/32
-beats_in_bar = [2] # possible time signatures 1/2/3/4/5/6/7/8/9
-proportion_of_pauses = 3 # 0-100
-proportion_of_accents = 35  # 0-100
+# generation_details: 16, [2], 3, 35, 0, 1, 0, 1, ['R'], False, ['quitniplets'], False
+user_seed = "Ted Reed turn "
+bars_in_etude = 4 # number of measures in a piece 4/8/16/32
+beats_in_bar = [4] # possible time signatures 1/2/3/4/5/6/7/8/9
+proportion_of_pauses = 45    # 0-100
+proportion_of_accents = 0  # 0-100
 proportion_of_flams = 0 # 0-100
 maximum_flams_in_a_row = 1 # 1-4
 proportion_of_doubles = 0 # 0-100
@@ -12,10 +16,10 @@ starting_hand = ['R'] # ['R', 'L'] ['R'], ['L']
 
 # al least one of them == True
 enabled_notes = {
-    'eight': [False, 2],
+    'eight': [True, 2],
     'triplets': [False, 3],
     'sixteen': [False, 4],
-    'quitniplets': [True, 5],
+    'quitniplets': [False, 5],
     'sixteen_triplets': [False, 6],
     'septoles': [False, 7],
     
@@ -33,6 +37,7 @@ for enabled_note in enabled_notes:
 if enabled_notes['sixteen'][0] and enabled_notes['sixteen_triplets'][0]:
     enabled_notes['two_sixteenths_with_triplet'][0] = True
 
+# APPLICATURE SETTINGS
 
 draw_reverse_applicature = {
     'enabled': False,
@@ -42,5 +47,19 @@ draw_reverse_applicature = {
 
 show_applicature_in_score = False
 
+
+# TEMPO SETTINGS
+tempo = 0 # zero means auto, else 30-360
+
+if tempo == 0:
+    tempo = 500
+    for enabled_note in enabled_notes:
+        if enabled_notes[enabled_note][0]:
+            tempo = floor(min(tempo, 480/enabled_notes[enabled_note][1] - 8))
+    if proportion_of_flams == 0 and proportion_of_doubles == 0:
+        tempo = floor(tempo * 1.5)
+
+
 print('COMPLETED: user_settings.py')
 
+import python_to_ly
