@@ -53,7 +53,8 @@ score = r'''
 
 ###############################################################
 
-score += f'\\tempo 4 = {user_settings.tempo}'
+if user_settings.show_tempo_in_score:
+  score += f'\\tempo 4 = {user_settings.tempo}'
 
 
 beat_draw_schemes = {

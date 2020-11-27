@@ -1,10 +1,9 @@
 from math import floor
-from subprocess import Popen
 
 # SETTINGS
 # generation_details: 16, [2], 3, 35, 0, 1, 0, 1, ['R'], False, ['quitniplets'], False
-user_seed = "Ted Reed turn "
-bars_in_etude = 4 # number of measures in a piece 4/8/16/32
+user_seed = "Ted Reed turn 27"
+bars_in_etude = 16 # number of measures in a piece 4/8/16/32
 beats_in_bar = [4] # possible time signatures 1/2/3/4/5/6/7/8/9
 proportion_of_pauses = 45    # 0-100
 proportion_of_accents = 0  # 0-100
@@ -51,6 +50,7 @@ show_applicature_in_score = False
 # TEMPO SETTINGS
 tempo = 0 # zero means auto, else 30-360
 
+# calculate auto temp
 if tempo == 0:
     tempo = 500
     for enabled_note in enabled_notes:
@@ -59,6 +59,7 @@ if tempo == 0:
     if proportion_of_flams == 0 and proportion_of_doubles == 0:
         tempo = floor(tempo * 1.5)
 
+show_tempo_in_score = True
 
 print('COMPLETED: user_settings.py')
 
