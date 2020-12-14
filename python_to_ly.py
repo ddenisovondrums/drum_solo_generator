@@ -1,5 +1,6 @@
 import random
-import backend
+from backend import piece
+# from find_settings import piece
 import user_settings
 
 f= open("piece.ly","w")
@@ -425,7 +426,7 @@ state = {
 }
 
 # для каждого такта 
-for bar in backend.piece:
+for bar in piece:
 
   # если изменился размер
   if state['time'] != len(bar):

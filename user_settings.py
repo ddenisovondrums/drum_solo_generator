@@ -2,22 +2,22 @@ from math import floor
 
 # SETTINGS
 # generation_details: 16, [2], 3, 35, 0, 1, 0, 1, ['R'], False, ['quitniplets'], False
-user_seed = "Ted Reed turn 27"
-bars_in_etude = 16 # number of measures in a piece 4/8/16/32
+user_seed = "Tribute to Wilcoxon"
+bars_in_etude = 40 # number of measures in a piece 4/8/16/32
 beats_in_bar = [4] # possible time signatures 1/2/3/4/5/6/7/8/9
-proportion_of_pauses = 45    # 0-100
-proportion_of_accents = 0  # 0-100
+proportion_of_pauses = 0    # 0-100
+proportion_of_accents = 25  # 0-100
 proportion_of_flams = 0 # 0-100
-maximum_flams_in_a_row = 1 # 1-4
+maximum_flams_in_a_row = 2 # 1-4
 proportion_of_doubles = 0 # 0-100
 maximum_number_of_notes_played_with_one_hand_in_a_row = 1 # 1-4
 starting_hand = ['R'] # ['R', 'L'] ['R'], ['L']
 
 # al least one of them == True
 enabled_notes = {
-    'eight': [True, 2],
+    'eight': [False, 2],
     'triplets': [False, 3],
-    'sixteen': [False, 4],
+    'sixteen': [True, 4],
     'quitniplets': [False, 5],
     'sixteen_triplets': [False, 6],
     'septoles': [False, 7],
@@ -44,7 +44,7 @@ draw_reverse_applicature = {
     'L': 'R'
 }
 
-show_applicature_in_score = False
+show_applicature_in_score = True
 
 
 # TEMPO SETTINGS
@@ -59,7 +59,7 @@ if tempo == 0:
     if proportion_of_flams == 0 and proportion_of_doubles == 0:
         tempo = floor(tempo * 1.5)
 
-show_tempo_in_score = True
+show_tempo_in_score = False
 
 print('COMPLETED: user_settings.py')
 
